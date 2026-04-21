@@ -12,13 +12,22 @@
         .text-ocre { color: #8d6e63; }
         .bg-ocre { background-color: #8d6e63; }
         html { scroll-behavior: smooth; }
-        video { background: #000; width: 100%; height: 100%; }
-        /* Ajuste específico para que el video vertical se vea grande */
-        .video-container-vertical {
-            width: 100%;
-            max-width: 400px; /* Aumentamos el tamaño máximo */
-            aspect-ratio: 9 / 16;
+        
+        /* FUERZA BRUTA PARA EL TAMAÑO DEL VIDEO */
+        .contenedor-video-vertical {
+            width: 100% !important;
+            max-width: 550px !important; /* Aquí es donde le damos el tamaño real */
             margin: 0 auto;
+            border-radius: 2rem;
+            overflow: hidden;
+            background: #000;
+            border: 8px solid #1c1917;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        video {
+            width: 100% !important;
+            height: auto !important;
+            display: block;
         }
     </style>
 </head>
@@ -41,69 +50,50 @@
     <section id="inicio" class="pt-32 pb-10 gradient-brown text-white text-center">
         <div class="max-w-7xl mx-auto px-4">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6">La Estación de Ingeniería Clínica <br><span class="text-ocre">potenciada con IA</span></h1>
-            <p class="text-xl mb-10 max-w-3xl mx-auto text-gray-300">Análisis de neuroplasticidad y REPAO en una herramienta cerrada y segura.</p>
             <div class="max-w-5xl mx-auto">
                 <img src="dashboard.png" class="rounded-2xl shadow-2xl border-4 border-stone-800 w-full" alt="Dashboard Elite 7.0">
             </div>
         </div>
     </section>
 
-    <section id="demo" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8 text-stone-800 italic underline decoration-ocre">Elite 7.0 en Funcionamiento</h2>
-            <div class="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border-8 border-stone-900 bg-black max-w-4xl mx-auto">
+    <section id="demo" class="py-20 bg-white text-center">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-stone-800 italic underline decoration-ocre uppercase">Demostración Técnica</h2>
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-8 border-stone-900 bg-black">
                 <video controls playsinline preload="auto">
                     <source src="ELITE70DEMO.m4v" type="video/mp4">
-                    Su navegador no soporta el video.
                 </video>
-            </div>
-        </div>
-    </section>
-
-    <section id="modulos" class="py-20 max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-16 font-serif uppercase tracking-widest text-stone-800">Alta Especialización</h2>
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                <div class="text-ocre text-4xl mb-4"><i class="fas fa-brain"></i></div>
-                <h3 class="text-xl font-bold mb-3">Módulo EEC & Neuro-IA</h3>
-                <img src="eec.png" class="mb-4 rounded-lg shadow-md border border-gray-200">
-                <p class="text-gray-600 italic">Monitoreo de neuroplasticidad y reparación vincular.</p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                <div class="text-ocre text-4xl mb-4"><i class="fas fa-id-card"></i></div>
-                <h3 class="text-xl font-bold mb-3">Ficha de Identidad & Gestión</h3>
-                <img src="ficha.png" class="mb-4 rounded-lg shadow-md border border-gray-200">
-                <p class="text-gray-600 italic">Automatización de documentos legales y gestión.</p>
             </div>
         </div>
     </section>
 
     <section id="testimonio" class="py-20 bg-stone-100">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-16 italic text-stone-800">La Voz de la Experiencia</h2>
-            <div class="grid md:grid-cols-2 gap-16">
+            <h2 class="text-4xl font-bold text-center mb-16 italic text-stone-800">La Voz de la Experiencia</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
                 
                 <div class="flex flex-col items-center">
-                    <div class="video-container-vertical bg-stone-900 rounded-3xl border-8 border-stone-900 shadow-2xl overflow-hidden mb-8">
-                        <video controls playsinline preload="auto" class="w-full h-full object-cover">
+                    <div class="contenedor-video-vertical">
+                        <video controls playsinline preload="auto">
                             <source src="Grademo.m4v" type="video/mp4">
                         </video>
                     </div>
-                    <div class="text-center">
-                        <p class="text-ocre font-bold text-xl uppercase tracking-widest mb-2">Lic. Graciela Rios</p>
-                        <p class="text-gray-700 italic text-lg px-4 font-medium">"Una herramienta que eleva la supervisión clínica al siguiente nivel."</p>
+                    <div class="mt-8 text-center">
+                        <h3 class="text-2xl font-bold text-ocre uppercase tracking-widest">Lic. Graciela Rios</h3>
+                        <p class="text-xl text-gray-700 italic mt-4 px-6 font-medium">"Una herramienta que eleva la supervisión clínica al siguiente nivel."</p>
                     </div>
                 </div>
 
                 <div class="flex flex-col items-center">
-                    <div class="video-container-vertical bg-stone-900 rounded-3xl border-8 border-stone-900 shadow-2xl overflow-hidden mb-8">
-                        <video controls playsinline preload="auto" class="w-full h-full object-cover">
+                    <div class="contenedor-video-vertical">
+                        <video controls playsinline preload="auto">
                             <source src="videoruben.m4v" type="video/mp4">
                         </video>
                     </div>
-                    <div class="text-center">
-                        <p class="text-ocre font-bold text-xl uppercase tracking-widest mb-2">Dr. RUBEN M. PEREYRA</p>
-                        <p class="text-gray-700 italic text-lg px-4 font-medium">"Ingeniería y clínica unidas para garantizar la excelencia profesional."</p>
+                    <div class="mt-8 text-center">
+                        <h3 class="text-2xl font-bold text-ocre uppercase tracking-widest">Dr. RUBEN M. PEREYRA</h3>
+                        <p class="text-xl text-gray-700 italic mt-4 px-6 font-medium">"Ingeniería y clínica unidas para garantizar la excelencia profesional."</p>
                     </div>
                 </div>
 
@@ -112,7 +102,7 @@
     </section>
 
     <footer class="py-10 text-center border-t border-gray-200 bg-white">
-        <p class="text-gray-500 text-sm italic">© 2026 Elite 7.0 - Dr. RUBEN M. PEREYRA.</p>
+        <p class="text-gray-500 font-bold">© 2026 Elite 7.0 - Dr. RUBEN M. PEREYRA.</p>
     </footer>
 </body>
 </html>
