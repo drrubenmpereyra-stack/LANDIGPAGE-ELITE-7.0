@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite 7.0 - Ingeniería Clínica con IA</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 fill=%22%23007BFF%22>🧠</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -13,96 +12,85 @@
         .bg-ocre { background-color: #8d6e63; }
         html { scroll-behavior: smooth; }
         
-        /* FUERZA BRUTA PARA EL TAMAÑO DEL VIDEO */
-        .contenedor-video-vertical {
-            width: 100% !important;
-            max-width: 550px !important; /* Aquí es donde le damos el tamaño real */
-            margin: 0 auto;
-            border-radius: 2rem;
-            overflow: hidden;
+        /* FUERZA TOTAL PARA EL TAMAÑO */
+        .seccion-video-vertical {
+            width: 100%;
+            max-width: 700px; /* Tamaño masivo para video vertical */
+            margin: 40px auto;
             background: #000;
-            border: 8px solid #1c1917;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-radius: 40px;
+            border: 10px solid #1c1917;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            overflow: hidden;
         }
         video {
             width: 100% !important;
             height: auto !important;
-            display: block;
         }
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-800">
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="text-2xl font-bold gradient-brown bg-clip-text text-transparent italic">Elite 7.0</div>
-                <div class="hidden md:flex space-x-8 font-medium">
-                    <a href="#inicio" class="hover:text-ocre transition">Inicio</a>
-                    <a href="#demo" class="hover:text-ocre transition">Demostración</a>
-                    <a href="#modulos" class="hover:text-ocre transition">Módulos</a>
-                    <a href="#testimonio" class="hover:text-ocre transition">Experiencia</a>
-                    <a href="https://wa.me/5493517648987" class="bg-ocre text-white px-5 py-2 rounded-full hover:bg-stone-700 transition">Solicitar Demo</a>
-                </div>
-            </div>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-brown bg-clip-text text-transparent italic">Elite 7.0</div>
+            <a href="https://wa.me/5493517648987" class="bg-ocre text-white px-6 py-2 rounded-full font-bold">Solicitar Demo</a>
         </div>
     </nav>
 
-    <section id="inicio" class="pt-32 pb-10 gradient-brown text-white text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">La Estación de Ingeniería Clínica <br><span class="text-ocre">potenciada con IA</span></h1>
-            <div class="max-w-5xl mx-auto">
-                <img src="dashboard.png" class="rounded-2xl shadow-2xl border-4 border-stone-800 w-full" alt="Dashboard Elite 7.0">
-            </div>
+    <section class="pt-32 pb-10 gradient-brown text-white text-center">
+        <div class="max-w-5xl mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-8">Ingeniería Clínica con IA</h1>
+            <img src="dashboard.png" class="rounded-2xl shadow-2xl border-4 border-stone-800" alt="Dashboard">
         </div>
     </section>
 
-    <section id="demo" class="py-20 bg-white text-center">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 text-stone-800 italic underline decoration-ocre uppercase">Demostración Técnica</h2>
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10 text-stone-800 uppercase italic">Demostración del Sistema</h2>
             <div class="rounded-3xl overflow-hidden shadow-2xl border-8 border-stone-900 bg-black">
-                <video controls playsinline preload="auto">
+                <video controls playsinline>
                     <source src="ELITE70DEMO.m4v" type="video/mp4">
                 </video>
             </div>
         </div>
     </section>
 
-    <section id="testimonio" class="py-20 bg-stone-100">
+    <section class="py-20 bg-stone-100">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-16 italic text-stone-800">La Voz de la Experiencia</h2>
+            <h2 class="text-4xl font-bold text-center mb-20 italic text-stone-800 underline decoration-ocre">La Voz de la Experiencia</h2>
             
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
-                
-                <div class="flex flex-col items-center">
-                    <div class="contenedor-video-vertical">
-                        <video controls playsinline preload="auto">
-                            <source src="Grademo.m4v" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="mt-8 text-center">
-                        <h3 class="text-2xl font-bold text-ocre uppercase tracking-widest">Lic. Graciela Rios</h3>
-                        <p class="text-xl text-gray-700 italic mt-4 px-6 font-medium">"Una herramienta que eleva la supervisión clínica al siguiente nivel."</p>
-                    </div>
+            <div class="mb-32 flex flex-col items-center">
+                <div class="seccion-video-vertical">
+                    <video controls playsinline>
+                        <source src="Grademo.m4v" type="video/mp4">
+                    </video>
                 </div>
-
-                <div class="flex flex-col items-center">
-                    <div class="contenedor-video-vertical">
-                        <video controls playsinline preload="auto">
-                            <source src="videoruben.m4v" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="mt-8 text-center">
-                        <h3 class="text-2xl font-bold text-ocre uppercase tracking-widest">Dr. RUBEN M. PEREYRA</h3>
-                        <p class="text-xl text-gray-700 italic mt-4 px-6 font-medium">"Ingeniería y clínica unidas para garantizar la excelencia profesional."</p>
-                    </div>
+                <div class="mt-8 text-center max-w-2xl">
+                    <h3 class="text-3xl font-bold text-ocre uppercase tracking-tighter">Lic. Graciela Rios</h3>
+                    <p class="text-2xl text-gray-700 italic mt-4 px-4 font-medium">"Una herramienta que eleva la supervisión clínica al siguiente nivel, aportando claridad y rigor científico."</p>
                 </div>
-
             </div>
+
+            <hr class="border-stone-300 mb-32">
+
+            <div class="flex flex-col items-center">
+                <div class="seccion-video-vertical">
+                    <video controls playsinline>
+                        <source src="videoruben.m4v" type="video/mp4">
+                    </video>
+                </div>
+                <div class="mt-8 text-center max-w-2xl">
+                    <h3 class="text-3xl font-bold text-ocre uppercase tracking-tighter">Dr. RUBEN M. PEREYRA</h3>
+                    <p class="text-2xl text-gray-700 italic mt-4 px-4 font-medium">"Ingeniería y clínica unidas para garantizar la seguridad del paciente y la excelencia profesional."</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <footer class="py-10 text-center border-t border-gray-200 bg-white">
-        <p class="text-gray-500 font-bold">© 2026 Elite 7.0 - Dr. RUBEN M. PEREYRA.</p>
+    <footer class="py-20 text-center bg-white border-t">
+        <p class="text-xl font-bold text-stone-800 italic">Elite 7.0 - Dr. RUBEN M. PEREYRA</p>
+        <p class="text-gray-500 mt-2">© 2026 Córdoba, Argentina</p>
     </footer>
 </body>
 </html>
